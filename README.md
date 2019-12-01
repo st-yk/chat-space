@@ -29,37 +29,39 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|index: true, null: false|
 ### Association
 - has_many :comments
-- has_many  :groups,  through:  :user_group
+- has_many  :groups,  through:  :user_groups
+- has_many  :user_groups
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|comment|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
+
 ### Association
 - has_many :comments
-- has_many  :users,  through:  :user_group
+- has_many  :users,  through:  :user_groups
+- has_many  :user_groups
 
 ## user_groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|text|null: false|
-|group_id|text|null: false|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
-- has_many :user_id
-- has_many :group_id
+- belongs_to :user
+- belongs_to :group
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text|text|
+|image|string|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
