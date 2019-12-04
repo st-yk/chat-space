@@ -1,0 +1,45 @@
+.chat-main
+  .chat-main__header
+    -# = link_to "#" do
+      = icon("bot" , "EDIT")
+
+    .chat-main__header-name
+      test
+      .chat-main__header-member
+        member
+    
+    .chat-main__header-btn
+      = link_to "Edit" , "#"
+    -# %a(href="#").Edit
+    -# aタグはHTMLなので使えない（Rubyで書きましょう）
+    -# link_toヘルパーメソッドを使いましょう  
+
+  .chat-main__message
+    .chat-main__message-list
+      .chat-main__message-name
+        test
+      .chat-main__message-comment
+        hello!
+
+    .chat-main__message-list
+      .chat-main__message-name
+        test
+      .chat-main__message-comment
+        hello!
+
+    .chat-main__message-list
+      .chat-main__message-name
+        test
+      .chat-main__message-comment
+        hello!
+      
+  .chat-main__form
+    .chat-main__form__message
+      .chat-main__form__message__text
+        type a message
+      .chat-main__form__message__img 
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file" , class:"input"}
+    .chat-main__form__btn 
+      = link_to "Send", "#"
