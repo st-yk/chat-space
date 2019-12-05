@@ -1,3 +1,4 @@
+
 $color: white;
 $color2:  #2f3e51;
 
@@ -31,13 +32,15 @@ $color2:  #2f3e51;
     &__edit-username{
      
       }
-  &__newgroup{
-    color: $color;
-    padding-left: 5px;
+    &__newgroup{
+      color: $color;
+      padding-left: 5px;
+    }
   }
-  }
-
 .group-list{
+  // a{
+  //   padding-left:20px;
+  // }
   height: calc(100vh - 100px);
   background-color: $color2;
   padding: 20px 20px 0;
