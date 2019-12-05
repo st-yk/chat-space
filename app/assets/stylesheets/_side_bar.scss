@@ -2,20 +2,20 @@
 $color: white;
 $color2:  #2f3e51;
 
-.side-bar{
+.chat-side{
   width: 300px;
   color: $color;
   font-size: 16px;
   height: 100vh;
   background-color: $color2;
 }
-.header{
+.side-header{
   align-items: center;
   background-color: #253141;
   height: 100px;
   display: flex;
   padding: 0 20px;
-  &__lists {
+  &__box__username {
     display: flex;
     justify-content: space-between;
   }
@@ -38,6 +38,9 @@ $color2:  #2f3e51;
     }
   }
 .group-list{
+  // a{
+  //   padding-left:20px;
+  // }
   height: calc(100vh - 100px);
   background-color: $color2;
   padding: 20px 20px 0;
