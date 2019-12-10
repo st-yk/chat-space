@@ -19,17 +19,17 @@ $(function(){
     else {
       var html = //メッセージに画像が含まれない場合のHTMLを作る
       `<div class="chat-main__message-list">
-      <div class="chat-main__message-name">
-      ${message.user_name}
-      </div>
-    <div class="chat-main__message-name__data">
-    ${message.date}
-    </div>
-    <div class="chat-main__message-comment"></div>
-      <p class="chat-main__message-comment">
-      ${message.text}
-      </p>
-    </div>`
+        <div class="chat-main__message-name">
+          ${message.user_name}
+        </div>
+          <div class="chat-main__message-name__data">
+            ${message.date}
+          </div>
+        <div class="chat-main__message-comment"></div>
+          <p class="chat-main__message-comment">
+            ${message.text}
+          </p>
+        </div>`
     }
     return html
   }
@@ -37,7 +37,7 @@ $(function(){
   $("#new_message").on("submit", function(e){
     e.preventDefault()
     var formData = new FormData(this);
-    // var url = $(this).attr('action')
+    
     var url = location.href ;
     $.ajax({
       url: url, 
@@ -47,12 +47,12 @@ $(function(){
       processData: false,
       contentType: false
     })  
-      // HTMLを呼び出す記述を書く
+    
     .done(function(message){
       var html = buildHTML(message);
       $('.chat-main__message').append(html);
       $('.chat-main__message').animate({ scrollTop: $('.chat-main__message')[0].scrollHeight});
-      $('#message_content').val('');
+      $('.new_message')[0].reset();
       $('.chat-main__form__btn').prop('disabled', false);
     })
     .fail(function(){
