@@ -7,7 +7,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    binding.pry
     @message = @group.messages.new(message_params)
     respond_to do |format|
       format.html { redirect_to group_messages_path, notice: "メッセージを送信しました" }
