@@ -39,6 +39,7 @@ $(function(){
     var formData = new FormData(this);
     
     var url = location.href ;
+    console.log(url)
     $.ajax({
       url: url, 
       type: 'POST',  
