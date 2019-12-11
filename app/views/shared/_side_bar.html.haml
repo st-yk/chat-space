@@ -9,7 +9,7 @@
             = link_to new_group_path do
               = icon('fas', 'edit', class: 'icon')
           %li.side-header__box__newgroup
-            = link_to "#" do
+            = link_to edit_user_path (current_user.id) do
               = icon('fas', 'cog', class: 'icon')
   .group-list
     - current_user.groups.each do |group|
