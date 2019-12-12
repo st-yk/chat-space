@@ -46,9 +46,9 @@ $(function(){
                     <div class="lower-message"> 
                       <img src=" + message.image + " class="lower-message__image" > 
                     </div> 
-                  </div>
-    };
-    return html;`
+                  </div>`
+             };
+        return html;
   };
 
   $("#new_message").on("submit", function(e){
