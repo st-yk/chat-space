@@ -1,7 +1,10 @@
 $(function(){
   var buildHTML = function(message) {
+    console.log(message)
     if (message.image){
       var image = `<img src="${message.image}">`
+    }else{
+      var image = ""
     }
       var html = 
                     `<div class="chat-main__message-big" data-id="${message.id}">
