@@ -24,13 +24,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    # @group = Group.edit(group_params)
-    # if @group.save
-    #   redirect_to group_messages_path, notice: 'グループを編集しました'
-    # else
-    #   render :update
-    # end
-    # # 編集画面へ移行
+
   end
 
   def update
